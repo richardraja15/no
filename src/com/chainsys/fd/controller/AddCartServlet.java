@@ -97,7 +97,7 @@ public class AddCartServlet extends HttpServlet {
 		foodCharges.put("finalAmount", String.valueOf(finalAmount));
 		List<Map<String, String>> foodListCharges = new ArrayList<>();
 		foodListCharges.add(foodCharges);
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		session.setAttribute("FOODLIST", foodListWithQuantity);
 		session.setAttribute("FOODCHARGES", foodListCharges);
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();

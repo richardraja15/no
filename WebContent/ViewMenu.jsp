@@ -123,6 +123,7 @@
 		$(".amount").hide();
 		var arr = [];
 		var x="${menuId}";
+		console.log(x);
 		var a = [];
 		var cart = new Object();
 		for (var i = 0; i < x.length; i++) {
